@@ -15,8 +15,7 @@
 [**Selectors**](#selectors)
 * [One selector per line](#one-selector-per-line)
 * [Class names in kebab-case](#class-names-in-kebab-case)
-* [No tags in selectors](#no-tags-in-selectors)
-* [No IDs in selectors](#no-ids-in-selectors)
+* [No tags or IDs in selectors](#no-tags-or-IDs-in-selectors)
 
 [**Properties**](#properties)
 * [One property per line](#one-property-per-line)
@@ -153,34 +152,22 @@ example coming soon
 }
 ```
 
-### No tags in selectors
+### No tags or IDs in selectors
 
 ``` css
 /* Wrong */
 
-.using-tag img {
-	margin-bottom: 32px;
+.low-specificity a {
+	color: rgba(255, 0, 0, 1);
 }
 
-/* Right */
-
-.using-class .image {
-	margin-bottom: 32px;
-}
-```
-
-### No IDs in selectors
-
-``` css
-/* Wrong */
-
-#high-specificity {
+#high-specificity .link {
 	color: rgba(255, 0, 0, 1);
 }
 
 /* Right */
 
-.normal-specificity {
+.normal-specificity .link {
 	color: rgba(0, 255, 0, 1);
 }
 ```
