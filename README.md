@@ -43,6 +43,10 @@
 
 ## General
 
+### Tab indentation
+#### No whitespace at end of lines
+##### Newline at end of file
+
 ## Rules
 
 ## Selectors
