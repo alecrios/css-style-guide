@@ -155,6 +155,22 @@ example coming soon
 }
 ```
 
+### No tags in selectors
+
+``` css
+/* Wrong */
+
+.using-tag img {
+	margin-bottom: 32px;
+}
+
+/* Right */
+
+.using-class .image {
+	margin-bottom: 32px;
+}
+```
+
 ### No IDs in selectors
 
 ``` css
