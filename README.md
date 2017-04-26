@@ -3,41 +3,41 @@
 &nbsp;
 
 [**General**](#general)
-* Tab indentation
-* No whitespace at end of lines
-* Newline at end of file
+* [Tab indentation](#tab-indentation)
+* [No whitespace at end of lines](#no-whitespace-at-end-of-lines)
+* [Newline at end of file](#newline-at-end-of-file)
 
 [**Rules**](#rules)
-* One space before opening brace
-* Closing brace on new line
-* One blank line between rules
+* [One space before opening brace](#one-space-before-opening-brace)
+* [Closing brace on new line](#closing-brace-on-new-line)
+* [One blank line between rules](#one-blank-line-between-rules)
 
 [**Selectors**](#selectors)
-* One selector per line
-* Class names in kebab-case
-* No IDs in selectors
+* [One selector per line](#one-selector-per-line)
+* [Class names in kebab-case](#class-names-in-kebab-case)
+* [No IDs in selectors](#no-ids-in-selectors)
 
 [**Properties**](#properties)
-* One property per line
-* LSB property ordering
-* No space before colon
-* One space after colon
+* [One property per line](#one-property-per-line)
+* [LSB property ordering](#lsb-property-ordering)
+* [No space before colon](#no-space-before-colon)
+* [One space after colon](#one-space-after-colon)
 
 [**Values**](#values)
-* Single-quoted strings
-* Unitless zero values
-* RGBA color values
-* Leading zero on decimals
-* Unitless `line-height`
-* Aversion to `!important`
-* Sensible `z-index` values
+* [Single-quoted strings](#single-quoted-strings)
+* [Unitless zero values](#unitless-zero-values)
+* [RGBA color values](#rgba-color-values)
+* [Leading zero on decimals](#leading-zero-on-decimals)
+* [Unitless `line-height`](#unitless-line-height)
+* [Aversion to `!important`](#aversion-to-!important)
+* [Sensible `z-index` values](#sensible-z-index-values)
 
 [**At-Rules**](#at-rules)
-* Mobile-first media queries
+* [Mobile-first media queries](#mobile-first-media-queries)
 
 [**Comments**](#comments)
-* Hierarchical heading system
-* Appropriate capitalization
+* [Hierarchical heading system](#hierarchical-heading-system)
+* [Appropriate capitalization](#appropriate-capitalization)
 
 &nbsp;
 
