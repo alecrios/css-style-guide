@@ -29,7 +29,7 @@
 * [RGBA color values](#rgba-color-values)
 * [Leading zero on decimals](#leading-zero-on-decimals)
 * [Unitless `line-height`](#unitless-line-height)
-* [Aversion to `!important`](#aversion-to-!important)
+* [Aversion to `!important`](#aversion-to-important)
 * [Sensible `z-index` values](#sensible-z-index-values)
 
 [**At-Rules**](#at-rules)
