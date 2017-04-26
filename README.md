@@ -4,7 +4,7 @@
 
 [**General**](#general)
 * [Tab indentation](#tab-indentation)
-* [No whitespace at end of lines](#no-whitespace-at-end-of-lines)
+* [No whitespace at ends of lines](#no-whitespace-at-ends-of-lines)
 * [Newline at end of file](#newline-at-end-of-file)
 
 [**Rules**](#rules)
@@ -49,7 +49,7 @@
 example coming soon
 ```
 
-### No whitespace at end of lines
+### No whitespace at ends of lines
 
 ``` css
 example coming soon
@@ -68,7 +68,15 @@ example coming soon
 ### One space before opening brace
 
 ``` css
-example coming soon
+/* Wrong */
+.too-tight{
+	background-color: rgba(255, 0, 0, 1);
+}
+
+/* Right */
+.just-right {
+	background-color: rgba(0, 255, 0, 1);
+}
 ```
 
 ### Closing brace on new line
