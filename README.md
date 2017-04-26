@@ -1,6 +1,8 @@
 # CSS Style Guide
 
-[**File**](#File)
+&nbsp;
+
+[**General**](#File)
 * Tab indentation
 * No whitespace at end of lines
 * Newline at end of file
@@ -36,3 +38,19 @@
 [**Comments**](#Comments)
 * Hierarchical heading system
 * Appropriate capitalization
+
+&nbsp;
+
+## General
+
+## Rules
+
+## Selectors
+
+## Properties
+
+## Values
+
+## At-Rules
+
+## Comments
