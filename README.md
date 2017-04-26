@@ -126,19 +126,50 @@ example coming soon
 ### One selector per line
 
 ``` css
-example coming soon
+/* Wrong */
+
+.two-selectors, .one-line {
+	color: rgba(255, 0, 0, 1);
+}
+
+/* Right */
+
+.two-selectors,
+.two-lines {
+	color: rgba(0, 255, 0, 1);
+}
 ```
 
 ### Class names in kebab-case
 
 ``` css
-example coming soon
+/* Wrong */
+
+.camelCase {
+	color: rgba(255, 0, 0, 1);
+}
+
+/* Right */
+
+.kebab-case {
+	color: rgba(0, 255, 0, 1);
+}
 ```
 
 ### No IDs in selectors
 
 ``` css
-example coming soon
+/* Wrong */
+
+#high-specificity {
+	color: rgba(255, 0, 0, 1);
+}
+
+/* Right */
+
+.normal-specificity {
+	color: rgba(0, 255, 0, 1);
+}
 ```
 
 &nbsp;
