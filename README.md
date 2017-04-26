@@ -339,7 +339,21 @@ example coming soon
 ### Mobile-first media queries
 
 ``` css
-example coming soon
+/* Wrong */
+
+@media screen and (max-width: 767px) {
+	.desktop-first {
+		color: rgba(255, 0, 0, 1);
+	}
+}
+
+/* Right */
+
+@media screen and (min-width: 768px) {
+	.mobile-first {
+		color: rgba(0, 255, 0, 1);
+	}
+}
 ```
 
 &nbsp;
@@ -349,7 +363,19 @@ example coming soon
 ### Hierarchical heading system
 
 ``` css
-example coming soon
+/* Primary Heading
+============================================================= */
+
+.primary-style {
+	padding: 32px;
+}
+
+/* Secondary Heading
+------------------------------------------------------------- */
+
+.secondary-style {
+	padding: 16px;
+}
 ```
 
 ### Appropriate capitalization
