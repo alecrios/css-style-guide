@@ -20,8 +20,7 @@
 [**Properties**](#properties)
 * [One property per line](#one-property-per-line)
 * [LSB property ordering](#lsb-property-ordering)
-* [No space before colon](#no-space-before-colon)
-* [One space after colon](#one-space-after-colon)
+* [No space before colon, one space after](#no-space-before-colon-one-space-after)
 
 [**Values**](#values)
 * [Single-quoted strings](#single-quoted-strings)
@@ -179,25 +178,64 @@ example coming soon
 ### One property per line
 
 ``` css
-example coming soon
+/* Wrong */
+
+.hard-to-scan {
+	top: 0; left: 0;
+}
+
+/* Right */
+
+.easy-to-scan {
+	top: 0;
+	left: 0;
+}
 ```
 
 ### LSB property ordering
 
 ``` css
-example coming soon
+/* Wrong */
+
+.randomly-ordered {
+	color: rbga(255, 255, 255, 1);
+	transition: transform 1s ease-out;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	background-color: rbga(0, 255, 0, 1);
+}
+
+/* Right */
+
+.logically-ordered {
+	position: absolute;
+	display: block;
+	background-color: rbga(0, 255, 0, 1);
+	color: rbga(255, 255, 255, 1);
+	transition: transform 1s ease-out;
+	cursor: pointer;
+}
 ```
 
-### No space before colon
+### No space before colon, one space after
 
 ``` css
-example coming soon
-```
+/* Wrong */
 
-### One space after colon
+.too-tight {
+	display:block;
+}
 
-``` css
-example coming soon
+.too-loose {
+	display : block;
+}
+
+/* Right */
+
+.just-right {
+	display: block;
+}
 ```
 
 &nbsp;
