@@ -245,25 +245,69 @@ example coming soon
 ### Single-quoted strings
 
 ``` css
-example coming soon
+/* Wrong */
+
+.double-quoted {
+	background-image: url("double.png");
+}
+
+/* Right */
+
+.single-quoted {
+	background-image: url('single.png');
+}
 ```
 
 ### Unitless zero values
 
 ``` css
-example coming soon
+/* Wrong */
+
+.some-unnecessary-units {
+	margin: 0px 8px 0px 16px;
+}
+
+/* Right */
+
+.only-necessary-units {
+	margin: 0 8px 0 16px;
+}
 ```
 
 ### RGBA color values
 
 ``` css
-example coming soon
+/* Wrong */
+
+.inconsistent-formatting {
+	background-color: rgba(0, 0, 0, 0.25);
+	border-color: rgb(127, 127, 127);
+	color: #3f3f3f;
+}
+
+/* Right */
+
+.consistent-formatting {
+	background-color: rgba(0, 0, 0, 0.25);
+	border-color: rgba(127, 127, 127, 1);
+	color: rgba(63, 63, 63, 1);
+}
 ```
 
 ### Leading zero on decimals
 
 ``` css
-example coming soon
+/* Wrong */
+
+.less-explicit {
+	opacity: .75;
+}
+
+/* Right */
+
+.more-explicit {
+	opacity: 0.75;
+}
 ```
 
 ### Unitless `line-height`
