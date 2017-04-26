@@ -69,26 +69,54 @@ example coming soon
 
 ``` css
 /* Wrong */
+
 .too-tight{
-	background-color: rgba(255, 0, 0, 1);
+	color: rgba(255, 0, 0, 1);
 }
 
 /* Right */
+
 .just-right {
-	background-color: rgba(0, 255, 0, 1);
+	color: rgba(0, 255, 0, 1);
 }
 ```
 
 ### Closing brace on new line
 
 ``` css
-example coming soon
+/* Wrong */
+
+.wrong-spot {
+	color: rgba(255, 0, 0, 1);}
+
+/* Right */
+
+.right-spot {
+	color: rgba(0, 255, 0, 1);
+}
 ```
 
 ### One blank line between rules
 
 ``` css
-example coming soon
+/* Wrong */
+
+.cramped {
+	color: rgba(255, 0, 0, 1);
+}
+.crowded {
+	color: rgba(255, 0, 0, 1);
+}
+
+/* Right */
+
+.breathable {
+	color: rgba(0, 255, 0, 1);
+}
+
+.spacious {
+	color: rgba(0, 255, 0, 1);
+}
 ```
 
 &nbsp;
