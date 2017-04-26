@@ -35,4 +35,4 @@
 
 [**Comments**](#Comments)
 * Hierarchical heading system
-*[Appropriate capitalization
+* Appropriate capitalization
