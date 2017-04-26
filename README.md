@@ -1,9 +1,9 @@
 # CSS Style Guide
 
 [**File**](#File)
-* [Tab indentation]
-* [No whitespace at end of lines]
-* [Newline at end of file]
+* Tab indentation
+* No whitespace at end of lines
+* Newline at end of file
 
 [**Rules**](#Rules)
 * One space before opening brace
