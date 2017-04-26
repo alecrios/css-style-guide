@@ -15,7 +15,7 @@
 [**Selectors**](#selectors)
 * [One selector per line](#one-selector-per-line)
 * [Class names in kebab-case](#class-names-in-kebab-case)
-* [No tags or IDs in selectors](#no-tags-or-IDs-in-selectors)
+* [No tags or IDs in selectors](#no-tags-or-ids-in-selectors)
 
 [**Properties**](#properties)
 * [One property per line](#one-property-per-line)
