@@ -28,9 +28,6 @@
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
 * [Leading zero on decimals](#leading-zero-on-decimals)
-* [Unitless `line-height`](#unitless-line-height)
-* [Aversion to `!important`](#aversion-to-important)
-* [Sensible `z-index` values](#sensible-z-index-values)
 
 [**At-Rules**](#at-rules)
 * [Mobile-first media queries](#mobile-first-media-queries)
@@ -218,7 +215,7 @@ example coming soon
 	color: rbga(255, 255, 255, 1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
-	display: block;
+	padding: 32px;
 	position: absolute;
 	background-color: rbga(0, 255, 0, 1);
 }
@@ -227,7 +224,7 @@ example coming soon
 
 .logically-ordered {
 	position: absolute;
-	display: block;
+	padding: 32px;
 	background-color: rbga(0, 255, 0, 1);
 	color: rbga(255, 255, 255, 1);
 	transition: transform 1s ease-out;
@@ -329,24 +326,6 @@ example coming soon
 .more-explicit {
 	opacity: 0.75;
 }
-```
-
-### Unitless `line-height`
-
-``` css
-example coming soon
-```
-
-### Aversion to `!important`
-
-``` css
-example coming soon
-```
-
-### Sensible `z-index` values
-
-``` css
-example coming soon
 ```
 
 &nbsp;
