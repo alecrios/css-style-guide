@@ -247,6 +247,10 @@ example coming soon
 ``` css
 /* Wrong */
 
+.not-quoted {
+	background-image: url(not.png);
+}
+
 .double-quoted {
 	background-image: url("double.png");
 }
