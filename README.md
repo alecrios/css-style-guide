@@ -2,28 +2,28 @@
 
 &nbsp;
 
-[**General**](#File)
+[**General**](#general)
 * Tab indentation
 * No whitespace at end of lines
 * Newline at end of file
 
-[**Rules**](#Rules)
+[**Rules**](#rules)
 * One space before opening brace
 * Closing brace on new line
 * One blank line between rules
 
-[**Selectors**](#Selectors)
+[**Selectors**](#selectors)
 * One selector per line
 * Class names in kebab-case
 * No IDs in selectors
 
-[**Properties**](#Properties)
+[**Properties**](#properties)
 * One property per line
 * LSB property ordering
 * No space before colon
 * One space after colon
 
-[**Values**](#Values)
+[**Values**](#values)
 * Single-quoted strings
 * Unitless zero values
 * RGBA color values
@@ -32,10 +32,10 @@
 * Aversion to `!important`
 * Sensible `z-index` values
 
-[**At-Rules**](#At-Rules)
+[**At-Rules**](#at-rules)
 * Mobile-first media queries
 
-[**Comments**](#Comments)
+[**Comments**](#comments)
 * Hierarchical heading system
 * Appropriate capitalization
 
