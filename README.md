@@ -44,8 +44,24 @@
 ## General
 
 ### Tab indentation
-#### No whitespace at end of lines
-##### Newline at end of file
+
+``` css
+.test {
+	testing: test;
+}
+```
+
+### No whitespace at end of lines
+
+``` css
+example coming soon
+```
+
+### Newline at end of file
+
+``` css
+example coming soon
+```
 
 ## Rules
 
