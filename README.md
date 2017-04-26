@@ -46,9 +46,7 @@
 ### Tab indentation
 
 ``` css
-.test {
-	testing: test;
-}
+example coming soon
 ```
 
 ### No whitespace at end of lines
@@ -63,14 +61,146 @@ example coming soon
 example coming soon
 ```
 
+&nbsp;
+
 ## Rules
+
+### One space before opening brace
+
+``` css
+example coming soon
+```
+
+### Closing brace on new line
+
+``` css
+example coming soon
+```
+
+### One blank line between rules
+
+``` css
+example coming soon
+```
+
+&nbsp;
 
 ## Selectors
 
+### One selector per line
+
+``` css
+example coming soon
+```
+
+### Class names in kebab-case
+
+``` css
+example coming soon
+```
+
+### No IDs in selectors
+
+``` css
+example coming soon
+```
+
+&nbsp;
+
 ## Properties
+
+### One property per line
+
+``` css
+example coming soon
+```
+
+### LSB property ordering
+
+``` css
+example coming soon
+```
+
+### No space before colon
+
+``` css
+example coming soon
+```
+
+### One space after colon
+
+``` css
+example coming soon
+```
+
+&nbsp;
 
 ## Values
 
+### Single-quoted strings
+
+``` css
+example coming soon
+```
+
+### Unitless zero values
+
+``` css
+example coming soon
+```
+
+### RGBA color values
+
+``` css
+example coming soon
+```
+
+### Leading zero on decimals
+
+``` css
+example coming soon
+```
+
+### Unitless `line-height`
+
+``` css
+example coming soon
+```
+
+### Aversion to `!important`
+
+``` css
+example coming soon
+```
+
+### Sensible `z-index` values
+
+``` css
+example coming soon
+```
+
+&nbsp;
+
 ## At-Rules
 
+### Mobile-first media queries
+
+``` css
+example coming soon
+```
+
+&nbsp;
+
 ## Comments
+
+### Hierarchical heading system
+
+``` css
+example coming soon
+```
+
+### Appropriate capitalization
+
+``` css
+example coming soon
+```
