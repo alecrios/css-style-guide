@@ -11,6 +11,7 @@
 * [One space before opening brace](#one-space-before-opening-brace)
 * [Closing brace on new line](#closing-brace-on-new-line)
 * [One blank line between rules](#one-blank-line-between-rules)
+* [Condensed format for alignment](#condensed-format-for-alignment)
 
 [**Selectors**](#selectors)
 * [One selector per line](#one-selector-per-line)
@@ -21,15 +22,20 @@
 * [One property per line](#one-property-per-line)
 * [LSB property ordering](#lsb-property-ordering)
 * [No space before colon, one space after](#no-space-before-colon-one-space-after)
+* [Semicolon after every property value](#semicolon-after-every-property-value)
 
 [**Values**](#values)
 * [Single-quoted strings](#single-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
-* [Leading zero on decimals](#leading-zero-on-decimals)
+* [No leading zero on decimals](#no-leading-zero-on-decimals)
+* [One space after comma in value lists](#one-space-after-comma-in-value-lists)
+* [No space after comma in value functions](#no-space-after-comma-in-value-functions)
+* [Alignment on prefixed properties] (#alignment-on-prefixed-properties)
 
 [**At-Rules**](#at-rules)
 * [Mobile-first media queries](#mobile-first-media-queries)
+* [Nearby media queries](#nearby-media-queries)
 
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
@@ -113,6 +119,12 @@ example coming soon
 .spacious {
 	color: rgba(0, 255, 0, 1);
 }
+```
+
+### Condensed format for alignment
+
+```
+Example coming soon
 ```
 
 &nbsp;
@@ -239,6 +251,12 @@ example coming soon
 }
 ```
 
+### Semicolon after every property value
+
+```
+Example coming soon
+```
+
 &nbsp;
 
 ## Values
@@ -299,20 +317,38 @@ example coming soon
 }
 ```
 
-### Leading zero on decimals
+### No leading zero on decimals
 
 ``` css
 /* Wrong */
 
 .less-explicit {
-	opacity: .75;
+	opacity: 0.75;
 }
 
 /* Right */
 
 .more-explicit {
-	opacity: 0.75;
+	opacity: .75;
 }
+```
+
+### One space after comma in value lists
+
+```
+Example coming soon
+```
+
+### No space after comma in value functions
+
+```
+Example coming soon
+```
+
+### Alignment on prefixed properties
+
+```
+Example coming soon
 ```
 
 &nbsp;
@@ -337,6 +373,12 @@ example coming soon
 		color: rgba(0, 255, 0, 1);
 	}
 }
+```
+
+### Nearby media queries
+
+```
+Example coming soon
 ```
 
 &nbsp;
