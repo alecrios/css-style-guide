@@ -198,7 +198,7 @@ CSS properties are written in kebab-case, so class names should follow suit.
 
 ### No tags or IDs in selectors
 
-To avoid specificity issues, all selectors should consist only of classes.
+To mitigate specificity issues, all selectors should consist only of classes.
 
 ``` css
 /* Wrong */
@@ -224,6 +224,8 @@ To avoid specificity issues, all selectors should consist only of classes.
 
 ### One property per line
 
+Writing multiple properties on a single line reduces readability.
+
 ``` css
 /* Wrong */
 
@@ -240,6 +242,12 @@ To avoid specificity issues, all selectors should consist only of classes.
 ```
 
 ### LSB property ordering
+
+Layout-Style-Behavior property ordering is a simple way to organize a rule to make it easier to read.
+
+* *Layout:* `position`, `display`, `width`, `margin`, `padding`, etc.
+* *Style:* `font`, `line-height`, `color`, `background`, etc.
+* *Behavior:* `transition`, `cursor`, `pointer-events`, etc.
 
 ``` css
 /* Wrong */
