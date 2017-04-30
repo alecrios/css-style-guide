@@ -110,26 +110,28 @@ A blank line increases readability.
 /* Wrong */
 
 .cramped {
+	font-size: 16px;
 	color: rgba(255,0,0,1);
 }
 .crowded {
-	color: rgba(255,0,0,1);
+	background-color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .breathable {
+	font-size: 16px;
 	color: rgba(0,255,0,1);
 }
 
 .spacious {
-	color: rgba(0,255,0,1);
+	background-color: rgba(0,255,0,1);
 }
 ```
 
 ### Condensed format for alignment
 
-For a set of single-property rules declaring the same property, aligning them without empty lines between makes comparison easier.
+For a set of single-property rules declaring the same property, aligning them with each other without empty lines in-between makes it easier to compare values.
 
 ``` css
 /* Wrong */
@@ -159,6 +161,8 @@ For a set of single-property rules declaring the same property, aligning them wi
 
 ### One selector per line
 
+A new line makes it more clear that the following selector is separate and not a descendent.
+
 ``` css
 /* Wrong */
 
@@ -176,21 +180,25 @@ For a set of single-property rules declaring the same property, aligning them wi
 
 ### Class names in kebab-case
 
+CSS properties are written in kebab-case, so class names should follow suit.
+
 ``` css
 /* Wrong */
 
 .camelCase {
-	color: rgba(255,0,0,1);
+	background-color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .kebab-case {
-	color: rgba(0,255,0,1);
+	background-color: rgba(0,255,0,1);
 }
 ```
 
 ### No tags or IDs in selectors
+
+To avoid specificity issues, all selectors should consist only of classes.
 
 ``` css
 /* Wrong */
