@@ -31,7 +31,7 @@
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
 * [One space after comma in value lists](#one-space-after-comma-in-value-lists)
 * [No space after comma in value functions](#no-space-after-comma-in-value-functions)
-* [Alignment on prefixed properties] (#alignment-on-prefixed-properties)
+* [Alignment on prefixed properties](#alignment-on-prefixed-properties)
 
 [**At-Rules**](#at-rules)
 * [Mobile-first media queries](#mobile-first-media-queries)
@@ -322,13 +322,13 @@ Example coming soon
 ``` css
 /* Wrong */
 
-.less-explicit {
+.with-leading-zero {
 	opacity: 0.75;
 }
 
 /* Right */
 
-.more-explicit {
+.without-leading-zero {
 	opacity: .75;
 }
 ```
