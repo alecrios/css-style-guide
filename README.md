@@ -245,9 +245,9 @@ Writing multiple properties on a single line reduces readability.
 
 Layout-Style-Behavior property ordering is a simple way to organize a rule to make it easier to read.
 
-* *Layout:* `position`, `display`, `width`, `margin`, `padding`, etc.
-* *Style:* `font`, `line-height`, `color`, `background`, etc.
-* *Behavior:* `transition`, `cursor`, `pointer-events`, etc.
+* **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
+* **Style:** `font`, `line-height`, `color`, `background`, etc.
+* **Behavior:** `transition`, `cursor`, `pointer-events`, etc.
 
 ``` css
 /* Wrong */
@@ -275,6 +275,8 @@ Layout-Style-Behavior property ordering is a simple way to organize a rule to ma
 
 ### No space before colon, one space after
 
+This configuration is most readable, because this is how it is used in the English language.
+
 ``` css
 /* Wrong */
 
@@ -294,6 +296,8 @@ Layout-Style-Behavior property ordering is a simple way to organize a rule to ma
 ```
 
 ### Semicolon after every property value
+
+Always including the semicolon prevents errors when reordering properties.
 
 ``` css
 /* Wrong */
