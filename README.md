@@ -69,6 +69,8 @@ example coming soon
 
 ### One space before opening brace
 
+A space between the selector and the brace increases readability.
+
 ``` css
 /* Wrong */
 
@@ -85,6 +87,8 @@ example coming soon
 
 ### Closing brace on new line
 
+The brace on its own line makes for easier editing and cleaner git diffs
+
 ``` css
 /* Wrong */
 
@@ -99,6 +103,8 @@ example coming soon
 ```
 
 ### One blank line between rules
+
+A blank line increases readability.
 
 ``` css
 /* Wrong */
@@ -122,6 +128,8 @@ example coming soon
 ```
 
 ### Condensed format for alignment
+
+For a set of single-property rules declaring the same property, aligning them without empty lines between makes comparison easier.
 
 ``` css
 /* Wrong */
