@@ -124,7 +124,26 @@ example coming soon
 ### Condensed format for alignment
 
 ```
-Example coming soon
+/* Wrong */
+
+.small {
+	font-size: 12px;
+}
+
+.medium {
+	font-size: 16px;
+}
+
+.large {
+	font-size: 20px;
+}
+
+/* Right */
+
+.small  {font-size: 12px;}
+.medium {font-size: 16px;}
+.large  {font-size: 20px;}
+
 ```
 
 &nbsp;
@@ -254,7 +273,21 @@ Example coming soon
 ### Semicolon after every property value
 
 ```
-Example coming soon
+/* Wrong */
+
+.without-last-semicolon {
+	display: block;
+	margin-bottom: 16px;
+	padding: 16px
+}
+
+.with-last-semicolon {
+	display: block;
+	margin-bottom: 16px;
+	padding: 16px;
+}
+
+/* Right */
 ```
 
 &nbsp;
