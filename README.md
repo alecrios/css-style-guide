@@ -73,13 +73,13 @@ example coming soon
 /* Wrong */
 
 .too-tight{
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .just-right {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 ```
 
@@ -89,12 +89,12 @@ example coming soon
 /* Wrong */
 
 .wrong-spot {
-	color: rgba(255, 0, 0, 1);}
+	color: rgba(255,0,0,1);}
 
 /* Right */
 
 .right-spot {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 ```
 
@@ -104,20 +104,20 @@ example coming soon
 /* Wrong */
 
 .cramped {
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 .crowded {
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .breathable {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 
 .spacious {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 ```
 
@@ -155,14 +155,14 @@ example coming soon
 /* Wrong */
 
 .two-selectors, .one-line {
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .two-selectors,
 .two-lines {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 ```
 
@@ -172,13 +172,13 @@ example coming soon
 /* Wrong */
 
 .camelCase {
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .kebab-case {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 ```
 
@@ -188,17 +188,17 @@ example coming soon
 /* Wrong */
 
 .low-specificity a {
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 
 #high-specificity .link {
-	color: rgba(255, 0, 0, 1);
+	color: rgba(255,0,0,1);
 }
 
 /* Right */
 
 .normal-specificity .link {
-	color: rgba(0, 255, 0, 1);
+	color: rgba(0,255,0,1);
 }
 ```
 
@@ -229,12 +229,12 @@ example coming soon
 /* Wrong */
 
 .randomly-ordered {
-	color: rbga(255, 255, 255, 1);
+	color: rbga(255,255,255,1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
 	padding: 32px;
 	position: absolute;
-	background-color: rbga(0, 255, 0, 1);
+	background-color: rbga(0,255,0,1);
 }
 
 /* Right */
@@ -242,8 +242,8 @@ example coming soon
 .logically-ordered {
 	position: absolute;
 	padding: 32px;
-	background-color: rbga(0, 255, 0, 1);
-	color: rbga(255, 255, 255, 1);
+	background-color: rbga(0,255,0,1);
+	color: rbga(255,255,255,1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
 }
@@ -335,17 +335,17 @@ example coming soon
 /* Wrong */
 
 .inconsistent-formatting {
-	background-color: rgba(0, 0, 0, 0.25);
-	border-color: rgb(127, 127, 127);
+	background-color: rgba(0,0,0,.25);
+	border-color: rgb(127,127,127);
 	color: #3f3f3f;
 }
 
 /* Right */
 
 .consistent-formatting {
-	background-color: rgba(0, 0, 0, 0.25);
-	border-color: rgba(127, 127, 127, 1);
-	color: rgba(63, 63, 63, 1);
+	background-color: rgba(0,0,0,.25);
+	border-color: rgba(127,127,127,1);
+	color: rgba(63,63,63,1);
 }
 ```
 
@@ -394,7 +394,7 @@ Example coming soon
 
 @media screen and (max-width: 767px) {
 	.desktop-first {
-		color: rgba(255, 0, 0, 1);
+		color: rgba(255,0,0,1);
 	}
 }
 
@@ -402,7 +402,7 @@ Example coming soon
 
 @media screen and (min-width: 768px) {
 	.mobile-first {
-		color: rgba(0, 255, 0, 1);
+		color: rgba(0,255,0,1);
 	}
 }
 ```
