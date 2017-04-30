@@ -123,7 +123,7 @@ example coming soon
 
 ### Condensed format for alignment
 
-```
+``` css
 /* Wrong */
 
 .small {
@@ -272,7 +272,7 @@ example coming soon
 
 ### Semicolon after every property value
 
-```
+``` css
 /* Wrong */
 
 .without-last-semicolon {
