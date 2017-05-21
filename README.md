@@ -220,6 +220,8 @@ To mitigate specificity issues, all selectors should consist only of classes.
 
 ### Meaningful and generic class names
 
+Improves clarity and prevents having to rename classes if there's a change in style.
+
 ``` css
 /* Wrong */
 
