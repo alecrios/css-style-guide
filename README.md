@@ -17,6 +17,7 @@
 * [One selector per line](#one-selector-per-line)
 * [Class names in kebab-case](#class-names-in-kebab-case)
 * [No tags or IDs in selectors](#no-tags-or-ids-in-selectors)
+* [Meaningful and generic class names](#meaningful-and-generic-class-names)
 
 [**Properties**](#properties)
 * [One property per line](#one-property-per-line)
@@ -29,9 +30,8 @@
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
-* [One space after comma in value lists](#one-space-after-comma-in-value-lists)
 * [No space after comma in value functions](#no-space-after-comma-in-value-functions)
-* [Alignment on prefixed properties](#alignment-on-prefixed-properties)
+* [One space after comma in value lists](#one-space-after-comma-in-value-lists)
 
 [**At-Rules**](#at-rules)
 * [Mobile-first media queries](#mobile-first-media-queries)
@@ -218,6 +218,34 @@ To mitigate specificity issues, all selectors should consist only of classes.
 }
 ```
 
+### Meaningful and generic class names
+
+``` css
+/* Wrong */
+
+.th-lft-256 {
+	float: left;
+	max-width: 256px;
+}
+
+.button-blue {
+	color: rgba(0,0,255,1);
+}
+
+/* Right */
+
+.image-thumbnail {
+	float: left;
+	max-width: 256px;
+}
+
+.button-primary {
+	color: rgba(0,0,255,1);
+}
+
+
+```
+
 &nbsp;
 
 ## Properties
@@ -393,22 +421,38 @@ Always including the semicolon prevents errors when reordering properties.
 }
 ```
 
-### One space after comma in value lists
-
-```
-Example coming soon
-```
-
 ### No space after comma in value functions
 
-```
-Example coming soon
+``` css
+/* Wrong */
+
+.one-space {
+	background: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+}
+
+/* Right */
+
+.no-space {
+	background: rgba(255,255,255,1);
+	color: rgba(0,0,0,1);
+}
 ```
 
-### Alignment on prefixed properties
+### One space after comma in value lists
 
-```
-Example coming soon
+``` css
+/* Wrong */
+
+.no-space {
+	background: linear-gradient(45deg,rgba(0,0,0,1),rgba(255,255,255,1));
+}
+
+/* Right */
+
+.one-space {
+	background: linear-gradient(45deg, rgba(0,0,0,1), rgba(255,255,255,1));
+}
 ```
 
 &nbsp;
