@@ -26,7 +26,7 @@
 * [Semicolon after every property value](#semicolon-after-every-property-value)
 
 [**Values**](#values)
-* [Single-quoted strings](#single-quoted-strings)
+* [Double-quoted strings](#single-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
@@ -351,7 +351,7 @@ Always including the semicolon prevents errors when reordering properties.
 
 ## Values
 
-### Single-quoted strings
+### Double-quoted strings
 
 ``` css
 /* Wrong */
@@ -360,14 +360,14 @@ Always including the semicolon prevents errors when reordering properties.
 	background-image: url(not.png);
 }
 
-.double-quoted {
-	background-image: url("double.png");
+.single-quoted {
+	background-image: url('single.png');
 }
 
 /* Right */
 
-.single-quoted {
-	background-image: url('single.png');
+.double-quoted {
+	background-image: url("double.png");
 }
 ```
 
