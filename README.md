@@ -30,8 +30,7 @@
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
-* [No space after comma in value functions](#no-space-after-comma-in-value-functions)
-* [One space after comma in value lists](#one-space-after-comma-in-value-lists)
+* [Spaces after commas](#spaces-after-commas)
 
 [**At-Rules**](#at-rules)
 * [Mobile-first media queries](#mobile-first-media-queries)
@@ -69,30 +68,30 @@ A space between the selector and the brace increases readability.
 /* Wrong */
 
 .too-tight{
-	color: rgba(255,0,0,1);
+	display: flex;
 }
 
 /* Right */
 
 .just-right {
-	color: rgba(0,255,0,1);
+	display: flex;
 }
 ```
 
 ### Closing brace on new line
 
-The brace on its own line makes for easier editing and cleaner git diffs
+The closing brace on its own line makes for easier editing and cleaner git diffs.
 
 ``` css
 /* Wrong */
 
 .wrong-spot {
-	color: rgba(255,0,0,1);}
+	position: relative;}
 
 /* Right */
 
 .right-spot {
-	color: rgba(0,255,0,1);
+	position: relative;
 }
 ```
 
@@ -104,28 +103,26 @@ A blank line increases readability.
 /* Wrong */
 
 .cramped {
-	font-size: 16px;
-	color: rgba(255,0,0,1);
+	text-decoration: underline;
 }
 .crowded {
-	background-color: rgba(255,0,0,1);
+	font-weight: 700;
 }
 
 /* Right */
 
 .breathable {
-	font-size: 16px;
-	color: rgba(0,255,0,1);
+	text-decoration: underline;
 }
 
 .spacious {
-	background-color: rgba(0,255,0,1);
+	font-weight: 700;
 }
 ```
 
 ### Condensed format for alignment
 
-For a set of single-property rules declaring the same property, aligning them with each other without empty lines in-between makes it easier to compare values.
+For a set of single-property rules with the same property, aligning them with each other without empty lines in-between makes it easier to compare values. This is a special exception to other rules.
 
 ``` css
 /* Wrong */
@@ -144,9 +141,9 @@ For a set of single-property rules declaring the same property, aligning them wi
 
 /* Right */
 
-.small  {font-size: 12px;}
-.medium {font-size: 16px;}
-.large  {font-size: 20px;}
+.small  {font-size: 12px}
+.medium {font-size: 16px}
+.large  {font-size: 20px}
 ```
 
 &nbsp;
@@ -161,14 +158,14 @@ A new line makes it more clear that the following selector is separate and not a
 /* Wrong */
 
 .two-selectors, .one-line {
-	color: rgba(255,0,0,1);
+	background-size: cover;
 }
 
 /* Right */
 
 .two-selectors,
 .two-lines {
-	color: rgba(0,255,0,1);
+	background-size: cover;
 }
 ```
 
@@ -180,13 +177,13 @@ CSS properties are written in kebab-case, so class names should follow suit.
 /* Wrong */
 
 .camelCase {
-	background-color: rgba(255,0,0,1);
+	display: inline;
 }
 
 /* Right */
 
 .kebab-case {
-	background-color: rgba(0,255,0,1);
+	display: inline;
 }
 ```
 
@@ -198,17 +195,17 @@ To mitigate specificity issues, all selectors should consist only of classes.
 /* Wrong */
 
 .low-specificity a {
-	color: rgba(255,0,0,1);
+	text-decoration: none;
 }
 
 #high-specificity .link {
-	color: rgba(255,0,0,1);
+	text-decoration: none;
 }
 
 /* Right */
 
 .normal-specificity .link {
-	color: rgba(0,255,0,1);
+	text-decoration: none;
 }
 ```
 
@@ -225,7 +222,7 @@ Improves clarity and prevents having to rename classes if there's a change in st
 }
 
 .button-blue {
-	color: rgba(0,0,255,1);
+	color: rgba(0, 0, 255, 1);
 }
 
 /* Right */
@@ -236,7 +233,7 @@ Improves clarity and prevents having to rename classes if there's a change in st
 }
 
 .button-primary {
-	color: rgba(0,0,255,1);
+	color: rgba(0, 0, 255, 1);
 }
 
 
@@ -248,7 +245,7 @@ Improves clarity and prevents having to rename classes if there's a change in st
 
 ### One property per line
 
-Writing multiple properties on a single line reduces readability.
+Write each property on its own line to improve readability.
 
 ``` css
 /* Wrong */
@@ -267,7 +264,7 @@ Writing multiple properties on a single line reduces readability.
 
 ### LSB property ordering
 
-Layout-Style-Behavior property ordering is a simple way to organize a rule to make it easier to read.
+Layout-Style-Behavior is a loose property ordering guideline that makes rules more organized.
 
 * **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
 * **Style:** `font`, `line-height`, `color`, `background`, etc.
@@ -277,12 +274,12 @@ Layout-Style-Behavior property ordering is a simple way to organize a rule to ma
 /* Wrong */
 
 .randomly-ordered {
-	color: rbga(255,255,255,1);
+	color: rbga(255, 255, 255, 1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
 	padding: 32px;
 	position: absolute;
-	background-color: rbga(0,255,0,1);
+	background-color: rbga(0, 255, 0, 1);
 }
 
 /* Right */
@@ -290,8 +287,8 @@ Layout-Style-Behavior property ordering is a simple way to organize a rule to ma
 .logically-ordered {
 	position: absolute;
 	padding: 32px;
-	background-color: rbga(0,255,0,1);
-	color: rbga(255,255,255,1);
+	background-color: rbga(0, 255, 0, 1);
+	color: rbga(255, 255, 255, 1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
 }
@@ -299,7 +296,7 @@ Layout-Style-Behavior property ordering is a simple way to organize a rule to ma
 
 ### No space before colon, one space after
 
-This configuration is most readable, because this is how it is used in the English language.
+This configuration is the most readable, because it matches colon usage in the English language.
 
 ``` css
 /* Wrong */
@@ -347,6 +344,8 @@ Always including the semicolon prevents errors when reordering properties.
 
 ### Double-quoted strings
 
+Using double-quoted strings matches the syntax used in HTML.
+
 ``` css
 /* Wrong */
 
@@ -367,6 +366,8 @@ Always including the semicolon prevents errors when reordering properties.
 
 ### Unitless zero values
 
+It is unnecessary to specify the unit on a zero value.
+
 ``` css
 /* Wrong */
 
@@ -383,71 +384,61 @@ Always including the semicolon prevents errors when reordering properties.
 
 ### RGBA color values
 
+Since alpha values can only be specified in the RGBA format, it makes sense to use RGBA for everything to be consistent.
+
 ``` css
 /* Wrong */
 
 .inconsistent-formatting {
-	background-color: rgba(0,0,0,.25);
-	border-color: rgb(127,127,127);
+	border-color: rgb(127, 127, 127);
+	background-color: rgba(0, 0, 0, .25);
 	color: #3f3f3f;
 }
 
 /* Right */
 
 .consistent-formatting {
-	background-color: rgba(0,0,0,.25);
-	border-color: rgba(127,127,127,1);
-	color: rgba(63,63,63,1);
+	border-color: rgba(127, 127, 127, 1);
+	background-color: rgba(0, 0, 0, .25);
+	color: rgba(63, 63, 63, 1);
 }
 ```
 
 ### No leading zero on decimals
 
+The omission of leading zeros reduces clutter.
+
 ``` css
 /* Wrong */
 
-.with-leading-zero {
-	opacity: 0.75;
+.with-leading-zeros {
+	margin: 0.75rem 0.375rem 0.75rem 0.375rem;
 }
 
 /* Right */
 
-.without-leading-zero {
-	opacity: .75;
+.without-leading-zeros {
+	margin: .75rem .375rem .75rem .375rem;
 }
 ```
 
-### No space after comma in value functions
+### Spaces after commas
+
+The inclusion of spaces improves the readability.
 
 ``` css
 /* Wrong */
 
-.one-space {
-	background: rgba(255, 255, 255, 1);
-	color: rgba(0, 0, 0, 1);
-}
-
-/* Right */
-
-.no-space {
-	background: rgba(255,255,255,1);
+.without-spaces {
+	background: linear-gradient(45deg,rgba(0,0,0,1),rgba(255,255,255,1));
 	color: rgba(0,0,0,1);
 }
-```
-
-### One space after comma in value lists
-
-``` css
-/* Wrong */
-
-.no-space {
-	background: linear-gradient(45deg,rgba(0,0,0,1),rgba(255,255,255,1));
-}
 
 /* Right */
 
-.one-space {
-	background: linear-gradient(45deg, rgba(0,0,0,1), rgba(255,255,255,1));
+.with-spaces {
+	background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
+	color: rgba(0, 0, 0, 1);
 }
 ```
 
@@ -457,28 +448,80 @@ Always including the semicolon prevents errors when reordering properties.
 
 ### Mobile-first media queries
 
+Rules should always be specified for small sizes first, and then media queries may be added to modify styling at larger sizes.
+
 ``` css
 /* Wrong */
 
+.desktop-first-approach {
+	font-size: 24px;
+}
+
 @media screen and (max-width: 767px) {
-	.desktop-first {
-		color: rgba(255,0,0,1);
+	.desktop-first-approach {
+		font-size: 16px;
 	}
 }
 
 /* Right */
 
+.mobile-first-approach {
+	font-size: 16px;
+}
+
 @media screen and (min-width: 768px) {
-	.mobile-first {
-		color: rgba(0,255,0,1);
+	.mobile-first-approach {
+		font-size: 24px;
 	}
 }
 ```
 
 ### Nearby media queries
 
-```
-Example coming soon
+Rules within media queries should always reside immediately after the rules they override, rather than grouped together at the bottom of the file. This makes it easier to find rules that affect the same element and see them all at once.
+
+```css
+/* Wrong */
+
+.selector-a {
+	display: none;
+}
+
+.selector-b {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.selector-a {
+		display: block;
+	}
+
+	.selector-b {
+		display: block;;
+	}
+}
+
+/* Right */
+
+.selector-a {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.selector-a {
+		display: block;
+	}
+}
+
+.selector-b {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.selector-b {
+		display: block;;
+	}
+}
 ```
 
 &nbsp;
