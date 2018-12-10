@@ -32,13 +32,13 @@
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
 * [Spaces after commas](#spaces-after-commas)
 
-[**At-Rules**](#at-rules)
+[**Media Queries**](#media-queries)
 * [Mobile-first media queries](#mobile-first-media-queries)
 * [Nearby media queries](#nearby-media-queries)
 
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
-* [Inline notes](#inline-notes)
+* [Notes within rules](#notes-within-rules)
 
 &nbsp;
 
@@ -62,7 +62,7 @@ Files should always end with a single LF newline character.
 
 ### One space before opening brace
 
-A space between the selector and the brace increases readability.
+A space between the selector and the brace improves readability.
 
 ``` css
 /* Wrong */
@@ -97,7 +97,7 @@ The closing brace on its own line makes for easier editing and cleaner git diffs
 
 ### One blank line between rules
 
-A blank line increases readability.
+A blank line improves readability.
 
 ``` css
 /* Wrong */
@@ -189,7 +189,7 @@ CSS properties are written in kebab-case, so class names should follow suit.
 
 ### No tags or IDs in selectors
 
-To mitigate specificity issues, all selectors should consist only of classes.
+All selectors should consist only of classes in order to mitigate specificity issues
 
 ``` css
 /* Wrong */
@@ -211,7 +211,7 @@ To mitigate specificity issues, all selectors should consist only of classes.
 
 ### Meaningful and generic class names
 
-Improves clarity and prevents having to rename classes if there's a change in style.
+Classes written with shorthand or specific values are difficult to read and make it more difficult to update if values change.
 
 ``` css
 /* Wrong */
@@ -245,7 +245,7 @@ Improves clarity and prevents having to rename classes if there's a change in st
 
 ### One property per line
 
-Write each property on its own line to improve readability.
+Writing each property on its own line improves readability.
 
 ``` css
 /* Wrong */
@@ -264,7 +264,7 @@ Write each property on its own line to improve readability.
 
 ### LSB property ordering
 
-Layout-Style-Behavior is a loose property ordering guideline that makes rules more organized.
+Layout-Style-Behavior is a loose guideline to help organize properties within rules.
 
 * **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
 * **Style:** `font`, `line-height`, `color`, `background`, etc.
@@ -444,7 +444,7 @@ The inclusion of spaces improves the readability.
 
 &nbsp;
 
-## At-Rules
+## Media Queries
 
 ### Mobile-first media queries
 
@@ -548,7 +548,7 @@ The following headings should be added as necessary to improve the organization 
 }
 ```
 
-### Inline notes
+### Notes within rules
 
 Notes may be written within rules to explain the styles. Notes should be written in sentence case and should have no blank lines above or below.
 
