@@ -38,7 +38,7 @@
 
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
-* [Appropriate capitalization](#appropriate-capitalization)
+* [Inline notes](#inline-notes)
 
 &nbsp;
 
@@ -530,24 +530,33 @@ Rules within media queries should always reside immediately after the rules they
 
 ### Hierarchical heading system
 
+The following headings should be added as necessary to improve the organization of files. Headings should be written in title case and should have a blank line above and below.
+
 ``` css
 /* Primary Heading
-============================================================= */
+============================================================================= */
 
 .primary-style {
 	padding: 32px;
 }
 
 /* Secondary Heading
-------------------------------------------------------------- */
+------------------------------------- */
 
 .secondary-style {
 	padding: 16px;
 }
 ```
 
-### Appropriate capitalization
+### Inline notes
 
-``` css
-example coming soon
+Notes may be written within rules to explain the styles. Notes should be written in sentence case and should have no blank lines above or below.
+
+```css
+.rule-with-note {
+	/* This is a note */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 ```
