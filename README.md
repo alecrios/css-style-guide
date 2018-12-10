@@ -47,21 +47,15 @@
 
 ### Tab indentation
 
-``` css
-example coming soon
-```
+Lines should be indented with tabs as opposed to spaces.
 
 ### No whitespace at ends of lines
 
-``` css
-example coming soon
-```
+Code should be neat and clean without unnecessary whitespace characters.
 
 ### Newline at end of file
 
-``` css
-example coming soon
-```
+Files should always end with a single LF newline character.
 
 &nbsp;
 
