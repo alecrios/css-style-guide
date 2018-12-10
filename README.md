@@ -274,12 +274,12 @@ Layout-Style-Behavior is a loose guideline to help organize properties within ru
 /* Wrong */
 
 .randomly-ordered {
-	color: rbga(255, 255, 255, 1);
+	color: rgba(255, 255, 255, 1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
 	padding: 32px;
 	position: absolute;
-	background-color: rbga(0, 255, 0, 1);
+	background-color: rgba(0, 255, 0, 1);
 }
 
 /* Right */
@@ -287,8 +287,8 @@ Layout-Style-Behavior is a loose guideline to help organize properties within ru
 .logically-ordered {
 	position: absolute;
 	padding: 32px;
-	background-color: rbga(0, 255, 0, 1);
-	color: rbga(255, 255, 255, 1);
+	background-color: rgba(0, 255, 0, 1);
+	color: rgba(255, 255, 255, 1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
 }
