@@ -26,6 +26,7 @@
 * [Semicolon after every property value](#semicolon-after-every-property-value)
 
 [**Values**](#values)
+* [REM units](#rem-units)
 * [Double-quoted strings](#single-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
@@ -128,22 +129,22 @@ For a set of single-property rules with the same property, aligning them with ea
 /* Wrong */
 
 .small {
-	font-size: 12px;
+	width: 1rem;
 }
 
 .medium {
-	font-size: 16px;
+	width: 2rem;
 }
 
 .large {
-	font-size: 20px;
+	width: 3rem;
 }
 
 /* Right */
 
-.small  {font-size: 12px}
-.medium {font-size: 16px}
-.large  {font-size: 20px}
+.small  {width: 1rem}
+.medium {width: 2rem}
+.large  {width: 3rem}
 ```
 
 &nbsp;
@@ -216,9 +217,8 @@ Classes written with shorthand or specific values are difficult to read and make
 ``` css
 /* Wrong */
 
-.th-lft-256 {
-	float: left;
-	max-width: 256px;
+.th-256 {
+	max-width: 16rem;
 }
 
 .button-blue {
@@ -228,8 +228,7 @@ Classes written with shorthand or specific values are difficult to read and make
 /* Right */
 
 .image-thumbnail {
-	float: left;
-	max-width: 256px;
+	max-width: 16rem;
 }
 
 .button-primary {
@@ -277,7 +276,7 @@ Layout-Style-Behavior is a loose guideline to help organize properties within ru
 	color: rgba(255, 255, 255, 1);
 	transition: transform 1s ease-out;
 	cursor: pointer;
-	padding: 32px;
+	padding: 2rem;
 	position: absolute;
 	background-color: rgba(0, 255, 0, 1);
 }
@@ -286,7 +285,7 @@ Layout-Style-Behavior is a loose guideline to help organize properties within ru
 
 .logically-ordered {
 	position: absolute;
-	padding: 32px;
+	padding: 2rem;
 	background-color: rgba(0, 255, 0, 1);
 	color: rgba(255, 255, 255, 1);
 	transition: transform 1s ease-out;
@@ -325,22 +324,44 @@ Always including the semicolon prevents errors when reordering properties.
 
 .without-last-semicolon {
 	display: block;
-	margin-bottom: 16px;
-	padding: 16px
+	margin-bottom: 1rem;
+	padding: 1rem
 }
 
 /* Right */
 
 .with-last-semicolon {
 	display: block;
-	margin-bottom: 16px;
-	padding: 16px;
+	margin-bottom: 1rem;
+	padding: 1rem;
 }
 ```
 
 &nbsp;
 
 ## Values
+
+### REM units
+
+Use REM units in all cases except for media queries, in which EM units have better support.
+
+``` css
+/* Wrong */
+
+.bad-units {
+	font-size: 16px;
+	line-height: 1.5em;
+	letter-spacing: 1px;
+}
+
+/* Right */
+
+.good-units {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	letter-spacing: .0625rem;
+}
+```
 
 ### Double-quoted strings
 
@@ -372,13 +393,13 @@ It is unnecessary to specify the unit on a zero value.
 /* Wrong */
 
 .some-unnecessary-units {
-	margin: 0px 8px 0px 16px;
+	margin: 0rem 1rem 0rem 2rem;
 }
 
 /* Right */
 
 .only-necessary-units {
-	margin: 0 8px 0 16px;
+	margin: 0 1rem 0 2rem;
 }
 ```
 
@@ -454,24 +475,24 @@ Rules should always be specified for small sizes first, and then media queries m
 /* Wrong */
 
 .desktop-first-approach {
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 47.9375em) {
 	.desktop-first-approach {
-		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 
 /* Right */
 
 .mobile-first-approach {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
 	.mobile-first-approach {
-		font-size: 24px;
+		font-size: 1.5rem;
 	}
 }
 ```
@@ -480,7 +501,7 @@ Rules should always be specified for small sizes first, and then media queries m
 
 Rules within media queries should always reside immediately after the rules they override, rather than grouped together at the bottom of the file. This makes it easier to find rules that affect the same element and see them all at once.
 
-```css
+``` css
 /* Wrong */
 
 .selector-a {
@@ -491,7 +512,7 @@ Rules within media queries should always reside immediately after the rules they
 	display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
 	.selector-a {
 		display: block;
 	}
@@ -507,7 +528,7 @@ Rules within media queries should always reside immediately after the rules they
 	display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
 	.selector-a {
 		display: block;
 	}
@@ -517,7 +538,7 @@ Rules within media queries should always reside immediately after the rules they
 	display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
 	.selector-b {
 		display: block;;
 	}
@@ -537,14 +558,14 @@ The following headings should be added as necessary to improve the organization 
 ============================================================================= */
 
 .primary-style {
-	padding: 32px;
+	padding: 2rem;
 }
 
 /* Secondary Heading
 ------------------------------------- */
 
 .secondary-style {
-	padding: 16px;
+	padding: 2rem;
 }
 ```
 
@@ -552,7 +573,7 @@ The following headings should be added as necessary to improve the organization 
 
 Notes may be written within rules to explain the styles. Notes should be written in sentence case and should have no blank lines above or below.
 
-```css
+``` css
 .rule-with-note {
 	/* This is a note */
 	position: absolute;
