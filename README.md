@@ -27,7 +27,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 [**Properties**](#properties)
 * [One level of indentation for each property](#one-level-of-indentation-for-each-property)
 * [One property per line](#one-property-per-line)
-* [LSB property ordering](#lsb-property-ordering)
+* [Logical property ordering](#logical-property-ordering)
 * [No space before colon, one space after](#no-space-before-colon-one-space-after)
 * [Semicolon after every property value](#semicolon-after-every-property-value)
 * [Multi-line format for alignment](#multi-line-format-for-alignment)
@@ -284,13 +284,13 @@ Writing each property on its own line improves readability.
 }
 ```
 
-### LSB property ordering
+### Logical property ordering
 
-Using the Layout-Style-Behavior method as a loose guideline helps to organize properties in a logical manner.
+Arranging properties in the following order helps the reader understand the styling more quickly.
 
-* **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
-* **Style:** `font`, `line-height`, `color`, `background`, etc.
-* **Behavior:** `transition`, `cursor`, `pointer-events`, etc.
+1. **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
+2. **Style:** `font`, `line-height`, `color`, `background`, etc.
+3. **Behavior:** `transition`, `cursor`, `pointer-events`, etc.
 
 ``` css
 /* Wrong */
@@ -301,13 +301,19 @@ Using the Layout-Style-Behavior method as a loose guideline helps to organize pr
 	cursor: pointer;
 	padding: 2rem;
 	position: absolute;
+	align-items: center;
+	justify-content: center;
 	background-color: rgba(0, 255, 0, 1);
+	display: flex;
 }
 
 /* Right */
 
 .logically-ordered {
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 2rem;
 	background-color: rgba(0, 255, 0, 1);
 	color: rgba(255, 255, 255, 1);
