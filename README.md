@@ -1,6 +1,9 @@
 # CSS Style Guide
 
+&nbsp;
+
 [**General**](#general)
+* [Maximum line length of 80 characters](#maximum-line-length-of-80-characters)
 * [Tab indentation](#tab-indentation)
 * [No whitespace at ends of lines](#no-whitespace-at-ends-of-lines)
 * [Newline at end of file](#newline-at-end-of-file)
@@ -41,10 +44,16 @@
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
 * [Notes within rules](#notes-within-rules)
+* [Comment keywords](#comment-keywords)
+* [Space-padded comments](#space-padded-comments)
 
 &nbsp;
 
 ## General
+
+### Maximum line length of 80 characters
+
+Long lines, such as comments, should be restricted to 80 characters.
 
 ### Tab indentation
 
@@ -643,4 +652,46 @@ Writing notes within rules is useful to provide clarity about methodology that i
 	top: 0;
 	left: 0;
 }
+```
+
+### Comment keywords
+
+Prefixing comments with `TODO` or `FIXME` makes it easy to identify areas that need to be revisited.
+
+``` css
+/* Wrong */
+
+.seems-complete-but-its-not {
+	display: block;
+	padding: 1rem 1.5rem;
+	height: 16rem;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(31, 31, 31, 1);
+}
+
+/* Right */
+
+.clearly-incomplete {
+	display: block;
+	padding: 1rem 1.5rem;
+	/* FIXME: Set height to scale according to width */
+	height: 16rem;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(31, 31, 31, 1);
+	/* TODO: Define type styles */
+}
+```
+
+### Space-padded comments
+
+Padding comments with a space on each side makes them easier to read.
+
+``` css
+/*Wrong */
+
+/* Wrong*/
+
+/*Wrong*/
+
+/* Right */
 ```
