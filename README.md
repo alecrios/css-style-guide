@@ -502,15 +502,13 @@ Adding one space after each comma improves the readability.
 /* Wrong */
 
 .without-spaces {
-	background: linear-gradient(45deg,rgba(0,0,0,1),rgba(255,255,255,1));
-	color: rgba(0,0,0,1);
+	color: rgba(31,63,95,1);
 }
 
 /* Right */
 
 .with-spaces {
-	background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
-	color: rgba(0, 0, 0, 1);
+	color: rgba(31, 63, 95, 1);
 }
 ```
 
