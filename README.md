@@ -17,13 +17,16 @@
 * [One selector per line](#one-selector-per-line)
 * [Class names in kebab-case](#class-names-in-kebab-case)
 * [No tags or IDs in selectors](#no-tags-or-ids-in-selectors)
+* [Quoted attribute values](#quoted-attribute-values)
 * [Meaningful and generic class names](#meaningful-and-generic-class-names)
 
 [**Properties**](#properties)
+* [One level of indentation for each property](#one-level-of-indendation-for-each-property)
 * [One property per line](#one-property-per-line)
 * [LSB property ordering](#lsb-property-ordering)
 * [No space before colon, one space after](#no-space-before-colon-one-space-after)
 * [Semicolon after every property value](#semicolon-after-every-property-value)
+* [Multi-line format for alignment](#multi-line-format-for-alignment)
 
 [**Values**](#values)
 * [REM units](#rem-units)
@@ -210,6 +213,24 @@ Writing selectors using only classes mitigates specificity issues.
 }
 ```
 
+### Quoted attribute values
+
+Including the quotes around attribute values in selectors is easier to read and is consistent with HTML syntax.
+
+``` css
+/* Wrong */
+
+.input[type=text] {
+	padding: 1rem 1.5rem;
+}
+
+/* Right */
+
+.input[type="text"] {
+	padding: 1rem 1.5rem;
+}
+```
+
 ### Meaningful and generic class names
 
 Naming a class with shorthand or unclear language reduces readability; naming a class with a particular value creates the unnecessary burden of renaming the class if the value changes.
@@ -234,13 +255,31 @@ Naming a class with shorthand or unclear language reduces readability; naming a 
 .button-primary {
 	color: rgba(0, 0, 255, 1);
 }
-
-
 ```
 
 &nbsp;
 
 ## Properties
+
+### One level of indentation for each property
+
+Indenting each property improves readability.
+
+``` css
+/* Wrong */
+
+.without-indentation {
+font-size: 1rem;
+line-height: 1.5rem;
+}
+
+/* Right */
+
+.with-indentation {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+```
 
 ### One property per line
 
@@ -334,6 +373,25 @@ Always including the semicolon prevents potential errors when reordering propert
 	display: block;
 	margin-bottom: 1rem;
 	padding: 1rem;
+}
+```
+
+### Multi-line format for alignment
+
+Comma-separated values can become long and unwieldy. Aligning them together across multiple lines helps to improve readability and results in cleaner git diffs. This is a special exception to other rules.
+
+``` css
+/* Wrong */
+
+.difficult-to-read {
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, .125), 0 0.75rem 0.75rem 0 rgba(0, 0, 0, .125);
+}
+
+/* Right */
+.easy-to-read {
+	box-shadow:
+		0 0.25rem 0.25rem 0 rgba(0, 0, 0, .125),
+		0 0.75rem 0.75rem 0 rgba(0, 0, 0, .125);
 }
 ```
 
