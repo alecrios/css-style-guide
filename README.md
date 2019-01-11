@@ -19,7 +19,6 @@
 * [Class names in kebab-case](#class-names-in-kebab-case)
 * [No tags or IDs in selectors](#no-tags-or-ids-in-selectors)
 * [Quoted attribute values](#quoted-attribute-values)
-* [Meaningful and generic class names](#meaningful-and-generic-class-names)
 
 [**Properties**](#properties)
 * [One level of indentation for each property](#one-level-of-indentation-for-each-property)
@@ -235,32 +234,6 @@ Including the quotes around attribute values in selectors is easier to read and 
 
 .input[type="text"] {
 	padding: 1rem 1.5rem;
-}
-```
-
-### Meaningful and generic class names
-
-Naming a class with shorthand or unclear language reduces readability; naming a class with a particular value creates the unnecessary burden of renaming the class if the value changes.
-
-``` css
-/* Wrong */
-
-.img-thmb-16 {
-	max-width: 16rem;
-}
-
-.button-blue {
-	color: rgba(0, 0, 255, 1);
-}
-
-/* Right */
-
-.image-thumbnail {
-	max-width: 16rem;
-}
-
-.button-primary {
-	color: rgba(0, 0, 255, 1);
 }
 ```
 
