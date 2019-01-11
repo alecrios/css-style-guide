@@ -21,7 +21,7 @@
 * [Meaningful and generic class names](#meaningful-and-generic-class-names)
 
 [**Properties**](#properties)
-* [One level of indentation for each property](#one-level-of-indendation-for-each-property)
+* [One level of indentation for each property](#one-level-of-indentation-for-each-property)
 * [One property per line](#one-property-per-line)
 * [LSB property ordering](#lsb-property-ordering)
 * [No space before colon, one space after](#no-space-before-colon-one-space-after)
@@ -388,6 +388,7 @@ Comma-separated values can become long and unwieldy. Aligning them together acro
 }
 
 /* Right */
+
 .easy-to-read {
 	box-shadow:
 		0 0.25rem 0.25rem 0 rgba(0, 0, 0, .125),
