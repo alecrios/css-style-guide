@@ -63,7 +63,7 @@ Files should always end with a single LF newline character.
 
 ### One space before opening brace
 
-A space between the selector and the brace improves readability.
+Adding a space between the selector and the brace improves readability.
 
 ``` css
 /* Wrong */
@@ -81,7 +81,7 @@ A space between the selector and the brace improves readability.
 
 ### Closing brace on new line
 
-The closing brace on its own line makes for easier editing and cleaner git diffs.
+Placing the closing brace on its own line makes for easier editing and cleaner git diffs.
 
 ``` css
 /* Wrong */
@@ -153,7 +153,7 @@ For a set of single-property rules of the same type, aligning them with each oth
 
 ### One selector per line
 
-A new line makes it more clear that the following selector is separate and not a descendent.
+Placing one selector per line helps to distinguish subsequent selectors from descendents.
 
 ``` css
 /* Wrong */
@@ -212,7 +212,7 @@ Writing selectors using only classes mitigates specificity issues.
 
 ### Meaningful and generic class names
 
-Classes that contain shorthand or unclear language are difficult to read, and classes that specify particular values as part of the name create the unnecessary burden of renaming if values change.
+Naming a class with shorthand or unclear language reduces readability; naming a class with a particular value creates the unnecessary burden of renaming the class if the value changes.
 
 ``` css
 /* Wrong */
@@ -263,7 +263,7 @@ Writing each property on its own line improves readability.
 
 ### LSB property ordering
 
-Layout-Style-Behavior is a loose guideline to help organize properties in a logical manner.
+Using the Layout-Style-Behavior method as a loose guideline helps to organize properties in a logical manner.
 
 * **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
 * **Style:** `font`, `line-height`, `color`, `background`, etc.
@@ -295,7 +295,7 @@ Layout-Style-Behavior is a loose guideline to help organize properties in a logi
 
 ### No space before colon, one space after
 
-This configuration is the most readable, because it matches colon usage in the English language.
+Using colons in this manner is the most readable, because it matches colon usage in the English language.
 
 ``` css
 /* Wrong */
@@ -407,7 +407,7 @@ Omitting the unit on zero values reduces clutter.
 
 ### RGBA color values
 
-Since alpha values can only be specified in the RGBA format, it makes sense to use RGBA across the board for consistency.
+Since alpha values can only be specified in the RGBA format, using RGBA across the board makes sense for consistency.
 
 ``` css
 /* Wrong */
@@ -447,7 +447,7 @@ Omitting leading zeros on decimals reduces clutter.
 
 ### Spaces after commas
 
-The inclusion of spaces improves the readability.
+Adding one space after each comma improves the readability.
 
 ``` css
 /* Wrong */
@@ -480,7 +480,7 @@ Because interfaces generally become more complex as the viewport increases in si
 	width: 50%;
 }
 
-@media screen and (max-width: 47.9375em) {
+@media (max-width: 47.9375em) {
 	.desktop-first-approach {
 		width: 100%;
 	}
@@ -492,7 +492,7 @@ Because interfaces generally become more complex as the viewport increases in si
 	width: 100%;
 }
 
-@media screen and (min-width: 48em) {
+@media (min-width: 48em) {
 	.mobile-first-approach {
 		width: 50%;
 	}
@@ -516,7 +516,7 @@ Rather than grouping all media queries together at the bottom of a file, placing
 
 ...
 
-@media screen and (min-width: 48em) {
+@media (min-width: 48em) {
 	.selector-a {
 		display: block;
 	}
@@ -532,7 +532,7 @@ Rather than grouping all media queries together at the bottom of a file, placing
 	display: none;
 }
 
-@media screen and (min-width: 48em) {
+@media (min-width: 48em) {
 	.selector-a {
 		display: block;
 	}
@@ -542,7 +542,7 @@ Rather than grouping all media queries together at the bottom of a file, placing
 	display: none;
 }
 
-@media screen and (min-width: 48em) {
+@media (min-width: 48em) {
 	.selector-b {
 		display: block;;
 	}
