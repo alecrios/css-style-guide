@@ -1,6 +1,10 @@
 # CSS Style Guide
 
+The purpose of this document is to codify a comprehensive set of guidelines for writing CSS. When strictly adhered to, these guidelines ensure that stylesheets are readable, understandable, and maintainable.
+
 &nbsp;
+
+## Table of Contents
 
 [**General**](#general)
 * [Maximum line length of 80 characters](#maximum-line-length-of-80-characters)
