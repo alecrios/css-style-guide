@@ -1,15 +1,9 @@
 # CSS Style Guide
 
-&nbsp;
-
-## Table of Contents
-
-&nbsp;
-
-1. [**General**](#general)
-	* 1.1 [Tab indentation](#tab-indentation)
-	* 1.2 [No whitespace at ends of lines](#no-whitespace-at-ends-of-lines)
-	* 1.3 [Newline at end of file](#newline-at-end-of-file)
+[**General**](#general)
+* [Tab indentation](#tab-indentation)
+* [No whitespace at ends of lines](#no-whitespace-at-ends-of-lines)
+* [Newline at end of file](#newline-at-end-of-file)
 
 [**Rules**](#rules)
 * [One space before opening brace](#one-space-before-opening-brace)
