@@ -98,7 +98,7 @@ The closing brace on its own line makes for easier editing and cleaner git diffs
 
 ### One blank line between rules
 
-A blank line improves readability.
+Separating rules in this way improves readability.
 
 ``` css
 /* Wrong */
@@ -123,7 +123,7 @@ A blank line improves readability.
 
 ### Condensed format for alignment
 
-For a set of single-property rules with the same property, aligning them with each other without empty lines in-between makes it easier to compare values. This is a special exception to other rules.
+For a set of single-property rules of the same type, aligning them with each other without empty lines in-between makes it easier to compare values. This is a special exception to other rules.
 
 ``` css
 /* Wrong */
@@ -172,25 +172,25 @@ A new line makes it more clear that the following selector is separate and not a
 
 ### Class names in kebab-case
 
-CSS properties are written in kebab-case, so class names should follow suit.
+Writing class names in kebab-case creates consistency with CSS properties.
 
 ``` css
 /* Wrong */
 
 .camelCase {
-	display: inline;
+	border-bottom: 1rem;
 }
 
 /* Right */
 
 .kebab-case {
-	display: inline;
+	border-bottom: 1rem;
 }
 ```
 
 ### No tags or IDs in selectors
 
-All selectors should consist only of classes in order to mitigate specificity issues
+Writing selectors using only classes mitigates specificity issues.
 
 ``` css
 /* Wrong */
@@ -212,12 +212,12 @@ All selectors should consist only of classes in order to mitigate specificity is
 
 ### Meaningful and generic class names
 
-Classes written with shorthand or specific values are difficult to read and make it more difficult to update if values change.
+Classes that contain shorthand or unclear language are difficult to read, and classes that specify particular values as part of the name create the unnecessary burden of renaming if values change.
 
 ``` css
 /* Wrong */
 
-.th-256 {
+.img-thmb-16 {
 	max-width: 16rem;
 }
 
@@ -263,7 +263,7 @@ Writing each property on its own line improves readability.
 
 ### LSB property ordering
 
-Layout-Style-Behavior is a loose guideline to help organize properties within rules.
+Layout-Style-Behavior is a loose guideline to help organize properties in a logical manner.
 
 * **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
 * **Style:** `font`, `line-height`, `color`, `background`, etc.
@@ -317,7 +317,7 @@ This configuration is the most readable, because it matches colon usage in the E
 
 ### Semicolon after every property value
 
-Always including the semicolon prevents errors when reordering properties.
+Always including the semicolon prevents potential errors when reordering properties.
 
 ``` css
 /* Wrong */
@@ -343,7 +343,9 @@ Always including the semicolon prevents errors when reordering properties.
 
 ### REM units
 
-Use REM units in all cases except for media queries, in which EM units have better support.
+Pixel units are misleading as they do not actually equate to on-screen pixels. Using REM units – where 1rem is equal to the root font size – is a more reliable, scalable, and accessible approach.
+
+_Note: Media query rules are exempt from this rule, as EM units have better support._
 
 ``` css
 /* Wrong */
@@ -365,7 +367,7 @@ Use REM units in all cases except for media queries, in which EM units have bett
 
 ### Double-quoted strings
 
-Using double-quoted strings matches the syntax used in HTML.
+Using double-quoted strings maintains consistency with the syntax used in HTML.
 
 ``` css
 /* Wrong */
@@ -387,7 +389,7 @@ Using double-quoted strings matches the syntax used in HTML.
 
 ### Unitless zero values
 
-It is unnecessary to specify the unit on a zero value.
+Omitting the unit on zero values reduces clutter.
 
 ``` css
 /* Wrong */
@@ -405,7 +407,7 @@ It is unnecessary to specify the unit on a zero value.
 
 ### RGBA color values
 
-Since alpha values can only be specified in the RGBA format, it makes sense to use RGBA for everything to be consistent.
+Since alpha values can only be specified in the RGBA format, it makes sense to use RGBA across the board for consistency.
 
 ``` css
 /* Wrong */
@@ -427,7 +429,7 @@ Since alpha values can only be specified in the RGBA format, it makes sense to u
 
 ### No leading zero on decimals
 
-The omission of leading zeros reduces clutter.
+Omitting leading zeros on decimals reduces clutter.
 
 ``` css
 /* Wrong */
@@ -469,37 +471,37 @@ The inclusion of spaces improves the readability.
 
 ### Mobile-first media queries
 
-Rules should always be specified for small sizes first, and then media queries may be added to modify styling at larger sizes.
+Because interfaces generally become more complex as the viewport increases in size, it logically follows to write base styles first and progressively add styles for larger viewports.
 
 ``` css
 /* Wrong */
 
 .desktop-first-approach {
-	font-size: 1.5rem;
+	width: 50%;
 }
 
 @media screen and (max-width: 47.9375em) {
 	.desktop-first-approach {
-		font-size: 1rem;
+		width: 100%;
 	}
 }
 
 /* Right */
 
 .mobile-first-approach {
-	font-size: 1rem;
+	width: 100%;
 }
 
 @media screen and (min-width: 48em) {
 	.mobile-first-approach {
-		font-size: 1.5rem;
+		width: 50%;
 	}
 }
 ```
 
 ### Nearby media queries
 
-Rules within media queries should always reside immediately after the rules they override, rather than grouped together at the bottom of the file. This makes it easier to find rules that affect the same element and see them all at once.
+Rather than grouping all media queries together at the bottom of a file, placing each media query immediately after the rule it overrides makes it easier to deal with related rules at once.
 
 ``` css
 /* Wrong */
@@ -511,6 +513,8 @@ Rules within media queries should always reside immediately after the rules they
 .selector-b {
 	display: none;
 }
+
+...
 
 @media screen and (min-width: 48em) {
 	.selector-a {
@@ -543,6 +547,8 @@ Rules within media queries should always reside immediately after the rules they
 		display: block;;
 	}
 }
+
+...
 ```
 
 &nbsp;
@@ -551,7 +557,7 @@ Rules within media queries should always reside immediately after the rules they
 
 ### Hierarchical heading system
 
-The following headings should be added as necessary to improve the organization of files. Headings should be written in title case and should have a blank line above and below.
+Writing headings with visual hierarchy improves the organization and scannability of files. Headings should be written in title case and should have a blank line above and below.
 
 ``` css
 /* Primary Heading
@@ -571,7 +577,7 @@ The following headings should be added as necessary to improve the organization 
 
 ### Notes within rules
 
-Notes may be written within rules to explain the styles. Notes should be written in sentence case and should have no blank lines above or below.
+Writing notes within rules is useful to provide clarity about methodology that is not immediately obvious. Notes should be written in sentence case and should have no blank lines above or below.
 
 ``` css
 .rule-with-note {
