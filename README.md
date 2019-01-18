@@ -34,7 +34,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 
 [**Values**](#values)
 * [REM units](#rem-units)
-* [Double-quoted strings](#single-quoted-strings)
+* [Double-quoted strings](#double-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
