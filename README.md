@@ -34,7 +34,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 
 [**Values**](#values)
 * [REM units](#rem-units)
-* [Double-quoted strings](#double-quoted-strings)
+* [Single-quoted strings](#single-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
 * [No leading zero on decimals](#no-leading-zero-on-decimals)
@@ -286,7 +286,7 @@ Writing each property on its own line improves readability.
 
 ### Logical property ordering
 
-Arranging properties in the following order helps the reader understand the styling more quickly.
+Arranging properties in the following general order helps the reader understand the styling more quickly.
 
 1. **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
 2. **Style:** `font`, `line-height`, `color`, `background`, etc.
@@ -414,9 +414,9 @@ _Note: Media query rules are exempt from this rule, as EM units have better supp
 }
 ```
 
-### Double-quoted strings
+### Single-quoted strings
 
-Using double-quoted strings maintains consistency with the syntax used in HTML.
+Using single-quoted strings is simply an opinionated choice.
 
 ``` css
 /* Wrong */
@@ -425,14 +425,14 @@ Using double-quoted strings maintains consistency with the syntax used in HTML.
 	background-image: url(not.png);
 }
 
-.single-quoted {
-	background-image: url('single.png');
+.double-quoted {
+	background-image: url("double.png");
 }
 
 /* Right */
 
-.double-quoted {
-	background-image: url("double.png");
+.single-quoted {
+	background-image: url('single.png');
 }
 ```
 
