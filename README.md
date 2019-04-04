@@ -37,7 +37,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [Single-quoted strings](#single-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
 * [RGBA color values](#rgba-color-values)
-* [No leading zero on decimals](#no-leading-zero-on-decimals)
+* [No leading or trailing zeros on decimals](#no-leading-or-trailing-zeros-on-decimals)
 * [Spaces after commas](#spaces-after-commas)
 
 [**Media Queries**](#media-queries)
@@ -476,21 +476,21 @@ Since alpha values can only be specified in the RGBA format, using RGBA across t
 }
 ```
 
-### No leading zero on decimals
+### No leading or trailing zeros on decimals
 
-Omitting leading zeros on decimals reduces clutter.
+Omitting unnecessary zeros reduces clutter.
 
 ``` css
 /* Wrong */
 
-.with-leading-zeros {
-	margin: 0.75rem 0.375rem 0.75rem 0.375rem;
+.with-unnecessary-zeros {
+	margin: 0.75rem 0.375rem 1.0rem 2.50rem;
 }
 
 /* Right */
 
-.without-leading-zeros {
-	margin: .75rem .375rem .75rem .375rem;
+.without-unnecessary-zeros {
+	margin: .75rem .375rem 1rem 2.5rem;
 }
 ```
 
