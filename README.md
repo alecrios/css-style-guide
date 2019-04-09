@@ -237,7 +237,7 @@ Including the quotes around attribute values in selectors is easier to read and 
 
 /* Right */
 
-.input[type="text"] {
+.input[type='text'] {
 	padding: 1rem 1.5rem;
 }
 ```
