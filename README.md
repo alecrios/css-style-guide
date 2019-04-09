@@ -242,8 +242,6 @@ Including the quotes around attribute values in selectors is easier to read and 
 }
 ```
 
-&nbsp;
-
 ### Double colons for pseudo-elements
 
 Using double colons for pseudo-elements helps to distinguish them from pseudo-classes.
