@@ -23,6 +23,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [Class names in kebab-case](#class-names-in-kebab-case)
 * [No tags or IDs in selectors](#no-tags-or-ids-in-selectors)
 * [Quoted attribute values](#quoted-attribute-values)
+* [Double colons for pseudo-elements](#double-colons-for-pseudo-elements)
 
 [**Properties**](#properties)
 * [One level of indentation for each property](#one-level-of-indentation-for-each-property)
@@ -238,6 +239,26 @@ Including the quotes around attribute values in selectors is easier to read and 
 
 .input[type="text"] {
 	padding: 1rem 1.5rem;
+}
+```
+
+&nbsp;
+
+### Double colons for pseudo-elements
+
+Using double colons for pseudo-elements helps to distinguish them from pseudo-classes.
+
+```css
+/* Wrong */
+
+.element:before {
+	content: '';
+}
+
+/* Right */
+
+.element::before {
+	content: '';
 }
 ```
 
