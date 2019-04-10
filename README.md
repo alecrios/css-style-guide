@@ -628,7 +628,7 @@ Rather than grouping all media queries together at the bottom of a file, placing
 
 Writing variable names in kebab-case creates consistency with the classes.
 
-``` css
+``` scss
 /* Wrong */
 
 $colorPrimary: rgba(36, 95, 189, 1);
