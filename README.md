@@ -747,7 +747,7 @@ Nesting beyond this level is indicative of markup that should be broken up into 
 
 ### Organization within Sass rules
 
-All standard CSS properties should be listed first, followed by any `@include` statements, followed by any nested rules.
+`@include` statements should be listed first, followed by standard CSS properties, followed by nested rules.
 
 ``` scss
 /* Wrong */
@@ -757,23 +757,23 @@ All standard CSS properties should be listed first, followed by any `@include` s
 		padding: .75rem;
 	}
 
-	@include mixin-1;
 	display: flex;
 	@include mixin-2;
 	align-items: center;
 	justify-content: center;
 	padding: .75rem;
+	@include mixin-1;
 }
 
 /* Right */
 
 .rule {
+	@include mixin-1;
+	@include mixin-2;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: .75rem;
-	@include mixin-1;
-	@include mixin-2;
 
 	.nested-rule {
 		padding: .75rem;
@@ -789,9 +789,9 @@ Nested rules should be visually separated from standard CSS properties and `@inc
 /* Wrong */
 
 .rule {
+	@include mixin-1;
 	display: block;
 	max-width: 64rem;
-	@include mixin-1;
 	.nested-rule-1 {
 		margin-top: 1.5rem;
 	}
@@ -803,9 +803,9 @@ Nested rules should be visually separated from standard CSS properties and `@inc
 /* Right */
 
 .rule {
+	@include mixin-1;
 	display: block;
 	max-width: 64rem;
-	@include mixin-1;
 
 	.nested-rule-1 {
 		margin-top: 1.5rem;
