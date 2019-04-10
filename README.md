@@ -21,7 +21,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 [**Selectors**](#selectors)
 * [One selector per line](#one-selector-per-line)
 * [Class names in kebab-case](#class-names-in-kebab-case)
-* [No tags or IDs in selectors](#no-tags-or-ids-in-selectors)
+* [Avoid tags and IDs in selectors if possible](#avoid-tags-and-ids-in-selectors-if-possible)
 * [Quoted attribute values](#quoted-attribute-values)
 * [Double colons for pseudo-elements](#double-colons-for-pseudo-elements)
 
@@ -38,7 +38,6 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [REM units](#rem-units)
 * [Single-quoted strings](#single-quoted-strings)
 * [Unitless zero values](#unitless-zero-values)
-* [RGBA color values](#rgba-color-values)
 * [No leading or trailing zeros on decimals](#no-leading-or-trailing-zeros-on-decimals)
 * [Spaces after commas](#spaces-after-commas)
 
@@ -210,7 +209,7 @@ Writing class names in kebab-case creates consistency with CSS properties.
 }
 ```
 
-### No tags or IDs in selectors
+### Avoid tags and IDs in selectors if possible
 
 Writing selectors using only classes mitigates specificity issues.
 
@@ -252,7 +251,7 @@ Including the quotes around attribute values in selectors is easier to read and 
 
 ### Double colons for pseudo-elements
 
-Using double colons for pseudo-elements helps to distinguish them from pseudo-classes.
+Using double colons for [pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) helps to distinguish them from [pseudo-classes](https://developer.mozilla.org/en-US/docs/Glossary/Pseudo-class).
 
 ``` css
 /* Wrong */
@@ -313,7 +312,7 @@ Writing each property on its own line improves readability.
 
 ### Logical property ordering
 
-Arranging properties in the following general order helps the reader understand the styling more quickly.
+Grouping properties together by similarity helps the reader understand the styling more quickly. As a loose guideline, prefer to order properties as follows:
 
 1. **Layout:** `position`, `display`, `width`, `margin`, `padding`, etc.
 2. **Style:** `font`, `line-height`, `color`, `background`, etc.
@@ -496,28 +495,6 @@ Omitting the unit on zero values reduces clutter.
 
 .only-necessary-units {
 	margin: 0 1rem 0 2rem;
-}
-```
-
-### RGBA color values
-
-Since alpha values can only be specified in the RGBA format, using RGBA across the board makes sense for consistency.
-
-``` css
-/* Wrong */
-
-.inconsistent-formatting {
-	border-color: rgb(127, 127, 127);
-	background-color: rgba(0, 0, 0, .25);
-	color: #3f3f3f;
-}
-
-/* Right */
-
-.consistent-formatting {
-	border-color: rgba(127, 127, 127, 1);
-	background-color: rgba(0, 0, 0, .25);
-	color: rgba(63, 63, 63, 1);
 }
 ```
 
