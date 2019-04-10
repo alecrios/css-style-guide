@@ -322,14 +322,14 @@ Grouping properties together by similarity helps the reader understand the styli
 /* Wrong */
 
 .randomly-ordered {
-	color: rgba(255, 255, 255, 1);
+	color: #ffffff;
 	transition: transform 1s ease-out;
 	cursor: pointer;
 	padding: 2rem;
 	position: absolute;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(0, 255, 0, 1);
+	background-color: #000000;
 	display: flex;
 }
 
@@ -341,8 +341,8 @@ Grouping properties together by similarity helps the reader understand the styli
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
-	background-color: rgba(0, 255, 0, 1);
-	color: rgba(255, 255, 255, 1);
+	background-color: #000000;
+	color: #ffffff;
 	transition: transform 1s ease-out;
 	cursor: pointer;
 }
@@ -668,8 +668,8 @@ Prefixing comments with `TODO` or `FIXME` makes it easy to identify areas that n
 	display: block;
 	padding: 1rem 1.5rem;
 	height: 16rem;
-	background-color: rgba(255, 255, 255, 1);
-	color: rgba(31, 31, 31, 1);
+	background-color: #ffffff;
+	color: #000000;
 }
 
 /* Right */
@@ -679,8 +679,8 @@ Prefixing comments with `TODO` or `FIXME` makes it easy to identify areas that n
 	padding: 1rem 1.5rem;
 	/* FIXME: Set height to scale according to width */
 	height: 16rem;
-	background-color: rgba(255, 255, 255, 1);
-	color: rgba(31, 31, 31, 1);
+	background-color: #ffffff;
+	color: #000000;
 	/* TODO: Define type styles */
 }
 ```
@@ -710,11 +710,11 @@ Writing variable names in kebab-case creates consistency with the classes.
 ``` scss
 /* Wrong */
 
-$colorPrimary: rgba(36, 95, 189, 1);
+$colorPrimary: #0000ff;
 
 /* Right */
 
-$color-primary: rgba(36, 95, 189, 1);
+$color-primary: #0000ff;
 ```
 
 ### Limit nesting to three levels deep
