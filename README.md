@@ -32,6 +32,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [No space before colon, one space after](#no-space-before-colon-one-space-after)
 * [Semicolon after every property value](#semicolon-after-every-property-value)
 * [Multi-line format for alignment](#multi-line-format-for-alignment)
+* [Avoid the important exception](#avoid-the-important-exception)
 
 [**Values**](#values)
 * [REM units](#rem-units)
@@ -411,6 +412,24 @@ Comma-separated values can become long and unwieldy. Aligning them together acro
 }
 ```
 
+### Avoid the important exception
+
+Using `!important` is bad practice because it breaks the natural cascading system.
+
+``` css
+/* Wrong */
+
+.element {
+	font-size: 1.5rem !important;
+}
+
+/* Right */
+
+.element.with-added-specificity {
+	font-size: 1.5rem;
+}
+```
+
 &nbsp;
 
 ## Values
@@ -738,6 +757,40 @@ Nested rules should be visually separated from standard CSS properties and `@inc
 	.nested-rule-2 {
 		margin-top: 3rem;
 	}
+}
+```
+
+### Avoid the extend statement
+
+Using `@extend` is bad practice because it behaves in unintuitive ways, leading to increased specificity, inheritence problems, and large file sizes.
+
+``` scss
+/* Wrong */
+
+h6 {
+	font-size: .75rem;
+	line-height: 1.25rem;
+}
+
+label {
+	@extend h6;
+	cursor: pointer;
+}
+
+/* Right */
+
+@mixin text-level-6 {
+	font-size: .75rem;
+	line-height: 1.25rem;
+}
+
+h6 {
+	@include text-level-6;
+}
+
+label {
+	@include text-level-6;
+	cursor: pointer;
 }
 ```
 
