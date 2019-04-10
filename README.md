@@ -163,9 +163,9 @@ For a set of single-property rules of the same type, aligning them with each oth
 
 /* Right */
 
-.small  {width: 1rem}
-.medium {width: 2rem}
-.large  {width: 3rem}
+.small  { width: 1rem }
+.medium { width: 2rem }
+.large  { width: 3rem }
 ```
 
 &nbsp;
