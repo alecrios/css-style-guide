@@ -46,18 +46,18 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [Mobile-first media queries](#mobile-first-media-queries)
 * [Nearby media queries](#nearby-media-queries)
 
+[**Comments**](#comments)
+* [Hierarchical heading system](#hierarchical-heading-system)
+* [Notes within rules](#notes-within-rules)
+* [Comment keywords](#comment-keywords)
+* [Space-padded comments](#space-padded-comments)
+
 [**Sass**](#sass)
 * [Variable names in kebab-case](#variable-names-in-kebab-case)
 * [Limit nesting to three levels deep](#limit-nesting-to-three-levels-deep)
 * [Organization within Sass rules](#organization-within-sass-rules)
 * [One blank line separating nested rules from other declarations](#one-blank-line-separating-nested-rules-from-other-declarations)
 * [Avoid the extend directive](#avoid-the-extend-directive)
-
-[**Comments**](#comments)
-* [Hierarchical heading system](#hierarchical-heading-system)
-* [Notes within rules](#notes-within-rules)
-* [Comment keywords](#comment-keywords)
-* [Space-padded comments](#space-padded-comments)
 
 &nbsp;
 
@@ -645,6 +645,85 @@ Rather than grouping all media queries together at the bottom of a file, placing
 
 &nbsp;
 
+## Comments
+
+### Hierarchical heading system
+
+Writing headings with visual hierarchy improves the organization and scannability of files. Headings should be written in title case and should have a blank line above and below.
+
+``` css
+/* Primary Heading
+============================================================================= */
+
+.primary-style {
+	padding: 2rem;
+}
+
+/* Secondary Heading
+------------------------------------- */
+
+.secondary-style {
+	padding: 2rem;
+}
+```
+
+### Notes within rules
+
+Writing notes within rules is useful to provide clarity about methodology that is not immediately obvious. Notes should be written in sentence case and should have no blank lines above or below.
+
+``` css
+.rule-with-note {
+	/* This is a note */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+```
+
+### Comment keywords
+
+Prefixing comments with `TODO` or `FIXME` makes it easy to identify areas that need to be revisited.
+
+``` css
+/* Wrong */
+
+.seems-complete-but-its-not {
+	display: block;
+	padding: 1rem 1.5rem;
+	height: 16rem;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(31, 31, 31, 1);
+}
+
+/* Right */
+
+.clearly-incomplete {
+	display: block;
+	padding: 1rem 1.5rem;
+	/* FIXME: Set height to scale according to width */
+	height: 16rem;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(31, 31, 31, 1);
+	/* TODO: Define type styles */
+}
+```
+
+### Space-padded comments
+
+Padding comments with a space on each side makes them easier to read.
+
+``` css
+/*Wrong */
+
+/* Wrong*/
+
+/*Wrong*/
+
+/* Right */
+```
+
+&nbsp;
+
 ## Sass
 
 ### Variable names in kebab-case
@@ -793,83 +872,4 @@ label {
 	@include text-level-6;
 	cursor: pointer;
 }
-```
-
-&nbsp;
-
-## Comments
-
-### Hierarchical heading system
-
-Writing headings with visual hierarchy improves the organization and scannability of files. Headings should be written in title case and should have a blank line above and below.
-
-``` css
-/* Primary Heading
-============================================================================= */
-
-.primary-style {
-	padding: 2rem;
-}
-
-/* Secondary Heading
-------------------------------------- */
-
-.secondary-style {
-	padding: 2rem;
-}
-```
-
-### Notes within rules
-
-Writing notes within rules is useful to provide clarity about methodology that is not immediately obvious. Notes should be written in sentence case and should have no blank lines above or below.
-
-``` css
-.rule-with-note {
-	/* This is a note */
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-```
-
-### Comment keywords
-
-Prefixing comments with `TODO` or `FIXME` makes it easy to identify areas that need to be revisited.
-
-``` css
-/* Wrong */
-
-.seems-complete-but-its-not {
-	display: block;
-	padding: 1rem 1.5rem;
-	height: 16rem;
-	background-color: rgba(255, 255, 255, 1);
-	color: rgba(31, 31, 31, 1);
-}
-
-/* Right */
-
-.clearly-incomplete {
-	display: block;
-	padding: 1rem 1.5rem;
-	/* FIXME: Set height to scale according to width */
-	height: 16rem;
-	background-color: rgba(255, 255, 255, 1);
-	color: rgba(31, 31, 31, 1);
-	/* TODO: Define type styles */
-}
-```
-
-### Space-padded comments
-
-Padding comments with a space on each side makes them easier to read.
-
-``` css
-/*Wrong */
-
-/* Wrong*/
-
-/*Wrong*/
-
-/* Right */
 ```
