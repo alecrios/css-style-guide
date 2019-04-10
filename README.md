@@ -47,6 +47,9 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 
 [**Sass**](#sass)
 * [Variable names in kebab-case](#variable-names-in-kebab-case)
+* [Limit nesting to three levels deep](#limit-nesting-to-three-levels-deep)
+* [Organization within Sass rules](#organization-within-sass-rules)
+* [One blank line separating nested rules from other declarations](#one-blank-line-separating-nested-rules-from-other-declarations)
 
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
@@ -636,6 +639,106 @@ $colorPrimary: rgba(36, 95, 189, 1);
 /* Right */
 
 $color-primary: rgba(36, 95, 189, 1);
+```
+
+### Limit nesting to three levels deep
+
+Nesting beyond this level is indicative of markup that should be broken up into multiple components.
+
+``` scss
+/* Wrong */
+
+.level-one {
+	.level-two {
+		.level-three {
+			.level-four {
+				...
+			}
+		}
+	}
+}
+
+/* Right */
+
+.level-one {
+	.level-two {
+		.level-three {
+			...
+		}
+	}
+}
+```
+
+### Organization within Sass rules
+
+All standard CSS properties should be listed first, followed by any `@include` statements, followed by any nested rules.
+
+``` scss
+/* Wrong */
+
+.rule {
+	.nested-rule-1 {
+		padding: .75rem;
+	}
+
+	@include mixin-1;
+	display: flex;
+	@include mixin-2;
+	align-items: center;
+	justify-content: center;
+	padding: .75rem;
+}
+
+/* Right */
+
+.rule {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .75rem;
+	@include mixin-1;
+	@include mixin-2;
+
+	.nested-rule {
+		padding: .75rem;
+	}
+}
+```
+
+### One blank line separating nested rules from other declarations
+
+Nested rules should be visually separated from standard CSS properties and `@include` statements. Sibling nested rules should also have one blank line in between.
+
+``` scss
+/* Wrong */
+
+.rule {
+	display: block;
+	max-width: 64rem;
+	@include mixin-1;
+	.nested-rule-1 {
+		margin-top: 1.5rem;
+	}
+	.nested-rule-2 {
+		margin-top: 3rem;
+	}
+}
+
+/* Right */
+
+.rule {
+	display: block;
+	max-width: 64rem;
+	@include mixin-1;
+
+	.nested-rule-1 {
+		margin-top: 1.5rem;
+	}
+
+	.nested-rule-2 {
+		margin-top: 3rem;
+	}
+}
 ```
 
 &nbsp;
