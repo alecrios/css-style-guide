@@ -45,6 +45,9 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [Mobile-first media queries](#mobile-first-media-queries)
 * [Nearby media queries](#nearby-media-queries)
 
+[**Sass**](#sass)
+* [Variable names in kebab-case](#variable-names-in-kebab-case)
+
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
 * [Notes within rules](#notes-within-rules)
@@ -246,7 +249,7 @@ Including the quotes around attribute values in selectors is easier to read and 
 
 Using double colons for pseudo-elements helps to distinguish them from pseudo-classes.
 
-```css
+``` css
 /* Wrong */
 
 .element:before {
@@ -615,6 +618,24 @@ Rather than grouping all media queries together at the bottom of a file, placing
 }
 
 ...
+```
+
+&nbsp;
+
+## Sass
+
+### Variable names in kebab-case
+
+Writing variable names in kebab-case creates consistency with the classes.
+
+``` css
+/* Wrong */
+
+$colorPrimary: rgba(36, 95, 189, 1);
+
+/* Right */
+
+$color-primary: rgba(36, 95, 189, 1);
 ```
 
 &nbsp;
