@@ -51,6 +51,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [Limit nesting to three levels deep](#limit-nesting-to-three-levels-deep)
 * [Organization within Sass rules](#organization-within-sass-rules)
 * [One blank line separating nested rules from other declarations](#one-blank-line-separating-nested-rules-from-other-declarations)
+* [Avoid the extend directive](#avoid-the-extend-directive)
 
 [**Comments**](#comments)
 * [Hierarchical heading system](#hierarchical-heading-system)
@@ -760,7 +761,7 @@ Nested rules should be visually separated from standard CSS properties and `@inc
 }
 ```
 
-### Avoid the extend statement
+### Avoid the extend directive
 
 Using `@extend` is bad practice because it behaves in unintuitive ways, leading to increased specificity, inheritence problems, and large file sizes.
 
