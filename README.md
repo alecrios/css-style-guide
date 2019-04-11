@@ -57,6 +57,7 @@ The purpose of this document is to codify a comprehensive set of guidelines for 
 * [Organization within Sass rules](#organization-within-sass-rules)
 * [One blank line separating nested rules from other declarations](#one-blank-line-separating-nested-rules-from-other-declarations)
 * [Avoid the extend directive](#avoid-the-extend-directive)
+* [Prefer single-line Sass comments](#prefer-single-line-sass-comments)
 
 &nbsp;
 
@@ -849,4 +850,14 @@ label {
 	@include text-level-6;
 	cursor: pointer;
 }
+```
+
+### Prefer single-line Sass comments
+
+The `//` comment type in Sass is easier to work with than the multi-line `/* */` comment type.
+
+``` scss
+/* Wrong */
+
+// Right
 ```
