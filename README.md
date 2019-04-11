@@ -709,11 +709,11 @@ Padding comments with a space on each side makes them easier to read.
 Writing variable names in kebab-case creates consistency with the classes.
 
 ``` scss
-/* Wrong */
+// Wrong
 
 $colorPrimary: #0000ff;
 
-/* Right */
+// Right
 
 $color-primary: #0000ff;
 ```
@@ -723,7 +723,7 @@ $color-primary: #0000ff;
 Nesting beyond this level is indicative of markup that should be broken up into multiple components.
 
 ``` scss
-/* Wrong */
+// Wrong
 
 .level-one {
 	.level-two {
@@ -735,7 +735,7 @@ Nesting beyond this level is indicative of markup that should be broken up into 
 	}
 }
 
-/* Right */
+// Right
 
 .level-one {
 	.level-two {
@@ -751,7 +751,7 @@ Nesting beyond this level is indicative of markup that should be broken up into 
 `@include` statements should be listed first, followed by standard CSS properties, followed by nested rules.
 
 ``` scss
-/* Wrong */
+// Wrong
 
 .rule {
 	.nested-rule-1 {
@@ -766,7 +766,7 @@ Nesting beyond this level is indicative of markup that should be broken up into 
 	@include mixin-1;
 }
 
-/* Right */
+// Right
 
 .rule {
 	@include mixin-1;
@@ -787,7 +787,7 @@ Nesting beyond this level is indicative of markup that should be broken up into 
 Nested rules should be visually separated from standard CSS properties and `@include` statements. Sibling nested rules should also have one blank line in between.
 
 ``` scss
-/* Wrong */
+// Wrong
 
 .rule {
 	@include mixin-1;
@@ -801,7 +801,7 @@ Nested rules should be visually separated from standard CSS properties and `@inc
 	}
 }
 
-/* Right */
+// Right
 
 .rule {
 	@include mixin-1;
@@ -823,7 +823,7 @@ Nested rules should be visually separated from standard CSS properties and `@inc
 Using `@extend` is bad practice because it behaves in unintuitive ways, leading to increased specificity, inheritence problems, and large file sizes.
 
 ``` scss
-/* Wrong */
+// Wrong
 
 h6 {
 	font-size: .75rem;
@@ -835,7 +835,7 @@ label {
 	cursor: pointer;
 }
 
-/* Right */
+// Right
 
 @mixin text-level-6 {
 	font-size: .75rem;
@@ -857,7 +857,27 @@ label {
 The `//` comment type in Sass is easier to work with than the multi-line `/* */` comment type.
 
 ``` scss
-/* Wrong */
+// Wrong
+
+.rule {
+	/* Inline comment 1 */
+	padding: .75rem;
+
+	.nested-rule {
+		/* Inline comment 2 */
+		padding: .75rem;
+	}
+}
 
 // Right
+
+.rule {
+	// Inline comment 1
+	padding: .75rem;
+
+	.nested-rule {
+		// Inline comment 2
+		padding: .75rem;
+	}
+}
 ```
